@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<!-- Yr11 Yearly 2017 Q31
+    Consider the following fragment of code:
+ 
+	1. BEGIN Peach(pip)
+	2. RETURN pip * 1.1
+	3. END Peach
+	4.  
+	5. BEGIN Main
+	6. FOR yum from 1 to 20
+	7. PRINT(“Hmm, “ + yum + “ gives “ + Peach(yum))
+	8. NEXT
+	9. END Main
+ 
+    Re-write the code above, including a more meaningful Print statement. 
+    Re-name the subroutine and make other changes you think will help 
+    improve readability and maintainability.
+    -->
+//Just a Github Comment for my version 2 to show that I can sync
+<head>
+    <title>v2.0.0 Code Cleaned Up!</title>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+        function GST(price, amount) {
+            return price * amount * 1.1;
+        }
+        function Main() {
+            var price_per_item = document.getElementById('txtPrice').value;
+			var amount_of_item = document.getElementById('txtAmount').value;
+            document.getElementById('txtGST_price').value = 'The cost of this is ' + GST(price_per_item, amount_of_item).toFixed(2)
+        }
+    </script>
+</head>
+<body>
+    <h1>GST Calculator</h1>
+    <p><br />
+    Enter the price of the time (do not include the '$').<br />
+    <textarea name="txtPrice" cols="30" rows="1" id="txtPrice"></textarea><br>
+	<br>
+	Enter the amount of items.<br />
+	<textarea name="txtAmount" cols="30" rows="1" id="txtAmount"></textarea>
+    <input id="btnRun" type="Button" value="Run" onclick="Main()" /><br />
+    <br />
+    The amount is:<br />
+    <textarea id="txtGST_price" rows="3" cols="30"></textarea>
+    </p>
+
+</body>
+</html>
